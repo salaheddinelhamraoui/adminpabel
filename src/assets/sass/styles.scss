@@ -9,7 +9,10 @@
 @import "base/typography";
 @import "base/links";
 
-$background-color: rgb(202, 40, 40);
+@import "components/demo";
+@import "components/components";
+
+$background-color: silver;
 
 body {
   background: $background-color;
