@@ -1,0 +1,30 @@
+.c-card {
+  @include e-card;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+  padding: spacing("normal");
+  width: 100%;
+}
+
+.c-card__title {
+  color: $color-title-subdued;
+  font-size: 17px;
+  font-weight: normal;
+  margin-left: spacing();
+}
+
+.c-card__desc {
+  width: 100%;
+  grid-column: 1 / span 2;
+  font-size: 14px;
+}
+
+.c-card__action {
+  margin: auto;
+}
+
+.c-card--no-desc {
+  .c-card__title {
+    margin-bottom: 0px;
+  }
+}
