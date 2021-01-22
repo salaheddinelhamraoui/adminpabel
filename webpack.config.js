@@ -95,6 +95,31 @@ module.exports = {
         new HtmlWebpackPlugin({
             filename: "index.html",
             template: "./src/index.html",
+            chunks: ['app', 'assets/js/banner', 'assets/js/chart', 'assets/js/tabs']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "add-product.html",
+            template: "./src/add-product.html",
+            chunks: ['app', 'assets/js/upload']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "products.html",
+            template: "./src/products.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "users.html",
+            template: "./src/users.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "orders.html",
+            template: "./src/orders.html",
+            chunks: ['app']
+        }),
+        new HtmlWebpackPlugin({
+            filename: "add-user.html",
+            template: "./src/add-user.html",
             chunks: ['app']
         }),
         new HtmlWebpackPlugin({

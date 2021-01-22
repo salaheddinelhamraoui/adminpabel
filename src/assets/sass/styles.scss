@@ -13,7 +13,9 @@
 @import "components/demo";
 @import "components/components";
 
-@import "pages/index.scss";
+@import "pages/index";
+@import "pages/single-page";
+@import "hacks/add-product";
 
 $background-color: #f2f2f2;
 
