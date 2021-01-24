@@ -19,6 +19,7 @@ $icon-size: 32px;
 
 .c-banner__desc {
   font-size: 14px;
+  margin-bottom: 10px;
 }
 
 .c-banner__action {
@@ -63,4 +64,25 @@ $icon-size: 32px;
 .c-banner.collapse {
   transform: scaleY(0);
   transform-origin: 50% 0;
+}
+
+@media (max-width: $bp-phone-normal) {
+  .c-banner {
+    padding-left: spacing("small");
+    padding-right: spacing("small");
+  }
+
+  .c-banner__icon {
+    right: spacing("small");
+    top: 20px;
+  }
+
+  .c-banner__close {
+    left: spacing("small");
+  }
+
+  .c-banner__title {
+    margin-left: spacing("normal");
+    margin-right: $icon-size + spacing("extra-small");
+  }
 }

@@ -1,7 +1,8 @@
+$upload-size: 400px;
 .c-upload {
   @include e-card;
-  min-width: 400px;
-  min-height: 400px;
+  min-width: $upload-size;
+  min-height: $upload-size;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -39,9 +40,10 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  background: url("../images/upload.svg") no-repeat center center/cover;
+  background: url("../images/upload.svg") no-repeat center;
   background-size: 150px;
   margin-bottom: spacing("small");
+
   img {
     max-width: 100%;
     height: auto;
@@ -66,8 +68,7 @@
   font-size: 14px;
 }
 
-// Small upload
-
+// small upload
 .c-upload--small {
   min-width: initial;
   min-height: initial;
@@ -87,13 +88,11 @@
   }
 
   .c-upload__label--remove {
-    margin-left: auto;
-    margin-right: initial;
+    margin-right: inherit;
   }
 }
 
 // state
-
 .has-image.c-upload {
   .c-upload__label--remove {
     display: block;
@@ -103,5 +102,13 @@
     img {
       display: block;
     }
+  }
+}
+
+//responsive
+@media (max-width: $upload-size) {
+  .c-upload {
+    min-width: initial;
+    width: 100%;
   }
 }
